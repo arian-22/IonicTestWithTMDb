@@ -4,9 +4,11 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { UpcomingPage } from '../pages/upcoming/upcoming';
 import { AboutPage } from '../pages/about/about';
 import { MovieCardComponent } from '../components/movie-card/movie-card';
+import { MovieSlideComponent } from '../components/movie-slide/movie-slide';
+
 import { DataMoviePage } from '../pages/data-movie/data-movie';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,9 +20,10 @@ import { HttpClientModule } from '@angular/common/http/';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    UpcomingPage,
     AboutPage,
     MovieCardComponent,
+    MovieSlideComponent,
     DataMoviePage
   ],
   imports: [
@@ -32,9 +35,10 @@ import { HttpClientModule } from '@angular/common/http/';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    UpcomingPage,
     AboutPage,
     MovieCardComponent,
+    MovieSlideComponent,
     DataMoviePage
   ],
   providers: [

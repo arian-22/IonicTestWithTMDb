@@ -1,0 +1,11 @@
+<ion-slide>
+    <img src= "https://image.tmdb.org/t/p/w342/{{ movie.poster_path }}"  class="slide-image" style="height: 300px;">
+    <h2 class="slide-title">{{ movie.title }}</h2>
+    <p>{{ movie.overview }}</p>
+    <button ion-button icon-right (click)="goToInfoMovie(movie)">
+        Más info 
+        <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-slide>
+
+  
