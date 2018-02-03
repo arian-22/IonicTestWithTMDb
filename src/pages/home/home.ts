@@ -23,8 +23,8 @@ export class HomePage {
     });
   }
 
-  goMovie():void{
-    this.navCtrl.push(DataMoviePage);
+  goMovie(movie:any):void{
+    this.navCtrl.push(DataMoviePage, {movie});
   }
 
 

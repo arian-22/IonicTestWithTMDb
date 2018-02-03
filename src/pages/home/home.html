@@ -10,6 +10,6 @@
 <ion-content padding *ngIf="data">
   <h3>Últimas películas</h3>
   <div *ngFor="let movie of data.results">
-      <movie-card *ngIf="movie" (click)="goMovie()" [movie]="movie"></movie-card>
+      <movie-card *ngIf="movie" (click)="goMovie(movie)" [movie]="movie"></movie-card>
   </div>
 </ion-content>

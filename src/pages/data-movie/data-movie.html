@@ -7,17 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Nombre película</ion-title>
+    <ion-title>{{ movie.title}} </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content >   
-        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png">
+    <img src= "https://image.tmdb.org/t/p/w342/{{ movie.poster_path }}">
+    
     <ion-content padding>
         <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+            <p>{{ movie.overview }}</p>
         </ion-card-content>
       
         <ion-row>
