@@ -19,10 +19,11 @@ export class ConnectToApiProvider {
   }
 
   loadMovieDiscover(page:number = 1) {
-    return this.http.get(this.baseURL + "/discover/movie" + this.parameterKey + "&sort_by=popularity.desc&page=" + page);
+    return this.http.get(this.baseURL + "/discover/movie" + this.parameterKey + "&sort_by=popularity.desc&language=es-AR&page=" + page);
   }
 
-  getMovieInfo() {
+  loadMovieUpcoming(page:number = 1) {
+    return this.http.get(this.baseURL + "/movie/upcoming" + this.parameterKey + "&sort_by=popularity.desc&language=es-AR&page=" + page);
 
   }
 
