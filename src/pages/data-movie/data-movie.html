@@ -13,32 +13,29 @@
 </ion-header>
 
 
-<ion-content >   
+<ion-content padding>   
     <img src= "https://image.tmdb.org/t/p/w342/{{ movie.poster_path }}">
-    
-    <ion-content padding>
         <ion-card-content>
+            <ion-note icon-left *ngIf="!movie.adult"><ion-icon name="checkmark-circle-outline"></ion-icon>Apto para todo público</ion-note>
+            <ion-note icon-left *ngIf="movie.adult"><ion-icon name="contact"></ion-icon>Contenido para adultos</ion-note>
+
             <p>{{ movie.overview }}</p>
+            <ion-badge item-end><p *ngIf="movie.release_date">Estreno: {{ movie.release_date | date: 'dd-MM-yyyy' }}</p></ion-badge>
         </ion-card-content>
       
         <ion-row>
           <ion-col>
             <button ion-button icon-left clear small>
-              <ion-icon name="thumbs-up"></ion-icon>
-              <div>12 Likes</div>
+              <ion-icon name="star"></ion-icon>
+              <div>{{ movie.vote_average }}</div>
             </button>
           </ion-col>
           <ion-col>
             <button ion-button icon-left clear small>
-              <ion-icon name="text"></ion-icon>
-              <div>4 Comments</div>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>{{ movie.popularity }}</div>
             </button>
           </ion-col>
-          <ion-col center text-center>
-            <ion-note>
-              11h ago
-            </ion-note>
-          </ion-col>
+
         </ion-row>
-      </ion-content>
 </ion-content>
