@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { DataMoviePage } from '../data-movie/data-movie';
+
+import { ConnectToApiProvider } from '../../providers/connect-to-api/connect-to-api';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  data : any;
 
+  constructor(public navCtrl: NavController, private prov: ConnectToApiProvider) {
+    this.prov.loadMovieDiscover().subscribe((data) => {
+      console.log(data);
+    });
   }
+
+  goMovie():void{
+    this.navCtrl.push(DataMoviePage);
+  }
+
+
 
 }
