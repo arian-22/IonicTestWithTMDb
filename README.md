@@ -7,6 +7,12 @@ Para descargar el repositorio:
 ```bash
 git clone https://github.com/arian-22/IonicTestWithTMDb.git
 ```
+Luego, acceder al directorio e instalar dependencias:
+
+```bash
+cd IonicTestWithTMDb/
+npm install
+```
 
 ## Lanzar la APP en el navegador
 
