@@ -17,7 +17,6 @@ export class DataMoviePage {
   movie: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.navParams.get('movie'));
     this.movie = this.navParams.get('movie');
   }
 
